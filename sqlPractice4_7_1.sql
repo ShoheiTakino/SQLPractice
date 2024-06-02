@@ -16,3 +16,14 @@ order by 商品名 asc
 SELECT DISTINCT 商品名 FROM 注文履歴
  WHERE 日付 >= '2024-01-01' AND 日付 <= '2024-01-31'
  ORDER BY 商品名
+
+ -- 問題: 3 --
+select 注文番号, 注文枝番, 注文金額
+from 注文履歴
+order by 注文金額 asc
+offset 1 rows 
+fetch next 3 rows only
+-- 模範解答:3
+SELECT 注文番号, 注文枝番, 注文金額 FROM 注文履歴
+ WHERE 分類 = '1' ORDER BY 注文金額
+OFFSET 1 ROW FETCH NEXT 3 ROWS ONLY
