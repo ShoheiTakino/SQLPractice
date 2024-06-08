@@ -20,3 +20,14 @@ order by 値
 
 -- 模範解答:2
 SELECT 値 FROM 整数 EXCEPT SELECT 値 FROM 偶数
+
+-- 問題: 3 --
+select 値 
+from 整数
+intersect
+select 値
+from 偶数
+order by 値
+
+-- 模範解答:3
+SELECT 値 FROM 整数 INTERSECT SELECT 値 FROM 偶数;
