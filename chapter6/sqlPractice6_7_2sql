@@ -9,5 +9,18 @@ SELECT COUNT(*) AS 社員数
   FROM 入退室管理
  WHERE 退室 IS NULL
 
+-- 問題: 2 --
+ select 社員名,
+       count(社員名) as 入室回数
+from 入退室管理
+group by 社員名
+order by count(社員名) desc
+
+-- 模範解答:2
+SELECT 社員名, COUNT(*) AS 入室回数
+  FROM 入退室管理
+ GROUP BY 社員名
+ ORDER BY 2 DESC
+
 
  
