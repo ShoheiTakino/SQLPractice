@@ -60,3 +60,16 @@ SELECT 都市名, MAX(最高気温)
   FROM 都市別気象観測
  GROUP BY 都市名
 HAVING MAX(最高気温) >= 38
+
+ -- 問題: 6 --
+ select 都市名,
+        min(最低気温) as 最低気温
+from 都市別気象観測
+group by 都市名
+having min(最低気温) <= -10
+
+-- 模範解答:6
+SELECT 都市名, MIN(最低気温)
+  FROM 都市別気象観測
+ GROUP BY 都市名
+HAVING MIN(最低気温) <= -10
