@@ -45,3 +45,17 @@ SELECT CASE 事由区分 WHEN '1' THEN 'メンテナンス'
   FROM 入退室管理
  GROUP BY 事由区分
 
+-- 問題: 4 --
+select 社員名,
+       count(社員名) as 入室回数
+from 入退室管理
+group by 社員名
+having count(社員名) > 10
+order by 2 desc
+
+-- 模範解答:4
+SELECT 社員名, COUNT(*) AS 入室回数
+  FROM 入退室管理
+ GROUP BY 社員名
+HAVING COUNT(*) > 10
+
