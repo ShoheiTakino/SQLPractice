@@ -1,0 +1,13 @@
+-- 6.7.2
+-- 問題: 1 --
+select count(*) as 入室中社員数
+from 入退室管理
+where 退室 is null
+
+-- 模範解答:1
+SELECT COUNT(*) AS 社員数
+  FROM 入退室管理
+ WHERE 退室 IS NULL
+
+
+ 
