@@ -42,3 +42,13 @@ SELECT 受注日, 受注ID, 文字数,
        CASE WHEN 文字数 > 10 THEN 500
             ELSE 0 END AS 特別加工料
   FROM 受注 ORDER BY 受注日, 受注ID
+
+  -- 問題: 3 --
+update 受注
+set 文字 = replace(文字, ' ', '★') 
+where 受注id = '113'
+
+-- 模範解答:3
+UPDATE 受注
+   SET 文字 = REPLACE(文字, ' ', '★')
+ WHERE 受注ID = '113'
