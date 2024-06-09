@@ -48,4 +48,15 @@ SELECT 月, AVG(降水量), AVG(最高気温), AVG(最低気温)
   FROM 都市別気象観測
  GROUP BY 月
 
- 
+  -- 問題: 5 --
+ select 都市名,
+       max(最高気温) as 最高気温
+from 都市別気象観測
+group by 都市名
+having max(最高気温) >= 38
+
+-- 模範解答:5
+SELECT 都市名, MAX(最高気温)
+  FROM 都市別気象観測
+ GROUP BY 都市名
+HAVING MAX(最高気温) >= 38
