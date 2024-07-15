@@ -35,6 +35,11 @@ select *
 from 口座
 where 更新日 is null
 
+-- 問題: 8 --
+select *
+from 口座
+where 名義 like '%ハシ%'
+
 
 -- 模範解答:1 
 -- 問題: 1 --
@@ -57,6 +62,9 @@ SELECT * FROM 口座 WHRERE 種別 <> '1'
 
 -- 問題: 7 --
 SELECT * FROM 口座 WHRERE 更新日 IS NULL
+
+-- 問題: 8 --
+SELECT * FROM 口座 WHRERE 名義 LIKE '%ハシ%'
 
 
 */
