@@ -25,6 +25,12 @@ select *
 from 口座
 where 残高 >= 1000000
 
+-- 問題: 6 --
+select *
+from 口座
+where 種別 = '1'
+
+
 
 
 
@@ -43,6 +49,11 @@ SELECT * FROM 口座 WHRERE 更新日 < '2024-01-01'
 
 -- 問題: 5 --
 SELECT * FROM 口座 WHRERE 残高 >= 1000000
+
+-- 問題: 6 --
+SELECT * FROM 口座 WHRERE 種別 <> '1'
+
+
 
 
 */
