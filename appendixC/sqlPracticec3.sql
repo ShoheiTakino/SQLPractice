@@ -46,6 +46,11 @@ from 口座
 where 更新日 >= '2024-01-01'
 and 更新日 <= '2024-01-31'
 
+-- 問題: 10 --
+select *
+from 口座
+where 種別 != '1'
+
 
 -- 模範解答:1 
 -- 問題: 1 --
@@ -74,6 +79,8 @@ SELECT * FROM 口座 WHRERE 名義 LIKE '%ハシ%'
 
 -- 問題: 9 --
 SELECT * FROM 口座 WHERE 更新 BETWEEN '2024-01-01' and '2024-01-31'
-SELECT * FROM 口座 BETWEEN '2024-01-01' and '2024-01-31'
+
+-- 問題: 10 --
+SELECT * FROM 口座 WHERE 種別 in ('2', '3')
 
 */
