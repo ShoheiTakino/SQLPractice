@@ -40,6 +40,12 @@ select *
 from 口座
 where 名義 like '%ハシ%'
 
+-- 問題: 9 --
+select *
+from 口座
+where 更新日 >= '2024-01-01'
+and 更新日 <= '2024-01-31'
+
 
 -- 模範解答:1 
 -- 問題: 1 --
@@ -66,5 +72,7 @@ SELECT * FROM 口座 WHRERE 更新日 IS NULL
 -- 問題: 8 --
 SELECT * FROM 口座 WHRERE 名義 LIKE '%ハシ%'
 
+-- 問題: 9 --
+SELECT * FROM 口座 BETWEEN '2024-01-01' and '2024-01-31'
 
 */
