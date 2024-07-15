@@ -28,7 +28,7 @@ where 残高 >= 1000000
 -- 問題: 6 --
 select *
 from 口座
-where 種別 = '1'
+where 種別 <> '1'
 
 
 
