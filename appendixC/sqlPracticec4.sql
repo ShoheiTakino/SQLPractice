@@ -10,6 +10,11 @@ select distinct 名義
 from 口座
 order by 名義 asc
 
+-- 問題: 3 --
+select *
+from 口座
+order by 残高 desc,
+口座番号 asc
 
 -- 模範解答:1 
 SELECT 口座番号, 名義, 種別, 残高, 更新日 FROM 口座 ORDER BY 口座番号
@@ -17,5 +22,7 @@ SELECT 口座番号, 名義, 種別, 残高, 更新日 FROM 口座 ORDER BY 口�
 -- 問題: 2 --
 SELECT DISTINCT 名義 FROM 口座 ORDER BY 名義
 
+-- 問題: 3 --
+SELECT 口座番号, 名義, 種別, 残高, 更新日 FROM 口座 ORDER BY 4 desc, 1
 
 */
