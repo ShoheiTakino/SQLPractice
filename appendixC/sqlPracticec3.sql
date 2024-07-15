@@ -30,8 +30,10 @@ select *
 from 口座
 where 種別 <> '1'
 
-
-
+-- 問題: 7 --
+select *
+from 口座
+where 更新日 is null
 
 
 -- 模範解答:1 
@@ -53,7 +55,8 @@ SELECT * FROM 口座 WHRERE 残高 >= 1000000
 -- 問題: 6 --
 SELECT * FROM 口座 WHRERE 種別 <> '1'
 
-
+-- 問題: 7 --
+SELECT * FROM 口座 WHRERE 更新日 IS NULL
 
 
 */
