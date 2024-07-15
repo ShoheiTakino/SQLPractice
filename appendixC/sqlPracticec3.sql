@@ -73,7 +73,11 @@ from 口座
 where 残高 < 10000
 and 更新日 is not null
 
-
+-- 問題: 14 --
+select *
+from 口座
+where 口座番号 like '2_____'
+or 名義 like 'エ__　%コ'
 
 -- 模範解答:1 
 -- 問題: 1 --
@@ -107,10 +111,7 @@ SELECT * FROM 口座 WHERE 更新 BETWEEN '2024-01-01' and '2024-01-31'
 SELECT * FROM 口座 WHERE 種別 in ('2', '3')
 
 -- 問題: 11 --
-SELECT *
-FROM 口座
-WHERE 名義 
-IN ('サカタ　リョウヘイ', 'マツモト　ミワコ', 'ハマダ　サトシ')
+SELECT * FROM 口座 WHERE 名義  IN ('サカタ　リョウヘイ', 'マツモト　ミワコ', 'ハマダ　サトシ')
 
 -- 問題: 12 --
 SELECT * FROM 口座 WHERE 更新日 >= '2023-12-30' AND 更新日 <= '2024-01-04'
@@ -118,6 +119,6 @@ SELECT * FROM 口座 WHERE 更新日 >= '2023-12-30' AND 更新日 <= '2024-01-0
 -- 問題: 13 --
 SELECT * FROM 口座 WHERE 残高 < 10000 AND 更新日 IS NOT NULL
 
-
-
+-- 問題: 14 --
+SELECT * FROM 口座 WHERE 口座番号 LIKE '2_____' OR 名義 LIKE 'エ__　%コ'
 */
